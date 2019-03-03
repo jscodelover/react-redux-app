@@ -2,6 +2,7 @@
 
 - Includes --
   - Redux Setup
+  - Css Module Setup
   - Sass Setup
   - Template for .env files
   - Basic css styling setup
@@ -27,3 +28,13 @@ Launches the test runner in the interactive watch mode.
 ### `npm run build`
 
 Builds the app for production to the `build` folder.
+
+#### .envtemplate
+
+Edit this template according to your project requirement, so that whoever clone your git repo will know what .env variables they need.
+Secret api key, token no. should be save in .env file and that file should not be push to remote git repo for security.
+( setup is also done for not pushing .env file ).
+example -
+
+- For creating .env variables -- `REACT_APP_(your-specified-name)`
+- For using -- `process.env.REACT_REACT_APP_(your-specified-name)`
