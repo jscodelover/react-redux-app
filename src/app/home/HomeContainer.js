@@ -3,10 +3,7 @@ import { connect } from "react-redux";
 import HomeComponent from "./HomeComponent";
 import { homeOperations } from "./duck";
 
-console.log(homeOperations);
-
 const HomeContainer = props => {
-  console.log(props);
   return (
     <HomeComponent
       {...props}

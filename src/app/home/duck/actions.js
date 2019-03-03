@@ -1,7 +1,6 @@
 import types from "./types.js";
 
 const incrementCount = payload => {
-  console.log("Increment");
   return {
     type: types.INCREMENT_COUNT,
     payload
