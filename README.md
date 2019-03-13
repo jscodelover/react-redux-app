@@ -2,32 +2,41 @@
 
 - Includes --
   - Redux Setup
-  - Css Module Setup
   - Sass Setup
+  - React Router Dom Setup
   - Template for .env files
   - Basic css styling setup
+  - Flow Type Checking(for props and state checking)
+  - Pre commit git hooks for prettier and eslint
+
+## Scripts
+
+| Script          | Description                                     |
+| --------------- | ----------------------------------------------- |
+| `npm install`   | Installs all dependencies                       |
+| `npm start`     | Starts project in `development` environment     |
+| `npm run build` | Builds the project for `production` environment |
+| `npm run test`  | Runs the testcases                              |
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Folder structure
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.
+```
+.
+├── public                   # Static public assets (not imported anywhere in source code)
+│   ├── index.html           # Main HTML page container
+|   ├── favicon.ico          # favicon file
+|   ├── manifest.json        # Provides information about an application (such as name, author, icon, and description)
+├── src                      # Application source code
+│   ├── index.js             # Application bootstrap and rendering
+│   ├── index.css            # Basic css for the project
+│   ├── app                  # Main route definitions and split points
+│   │   ├──               # Components that dictate major functionalities
+│   ├── store                # Redux-specific pieces
+│   │   ├── createStore.js   # Create and instrument redux store
+│   │   ├── rootReducers.js  # Reducer registry and injection
+```
 
 #### .envtemplate
 
