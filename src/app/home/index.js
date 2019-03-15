@@ -1,1 +1,3 @@
-export { default as Home } from "./HomeContainer";
+import createSplitPoint from "../../utils/codeSplitting";
+
+export default createSplitPoint("home/HomeContainer");
