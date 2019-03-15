@@ -23,38 +23,42 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ```
 .
-├── public                    # Static public assets (not imported anywhere in source code)
-│   ├── index.html            # Main HTML page container
-|   ├── favicon.ico           # favicon file
-|   ├── manifest.json         # Provides information about an application (such as name, author, icon, and description)
-├── src                       # Application source code
-│   ├── index.js              # Application bootstrap and rendering
-│   ├── index.css             # Basic css for the project
-│   ├── app                  
-│   │   ├──home               # Directories with the same names as the routes in App.js
-│   │   ├──App.js             # Main route definitions and split points
-│   ├── store                 # Redux-specific pieces
-│   │   ├── createStore.js    # Create and instrument redux store
-│   │   ├── rootReducers.js   # Reducer registry and injection
+├── public                     # Static public assets (not imported anywhere in source code)
+│   ├── index.html             # Main HTML page container
+|   ├── favicon.ico            # favicon file
+|   ├── manifest.json          # Provides information about an application (such as name, author, icon, and description)
+├── src                        # Application source code
+│   ├── index.js               # Application bootstrap and rendering
+│   ├── index.css              # Basic css for the project
+│   ├── app
+│   │   ├── home               # Directories with the same names as the routes in App.js
+│   │   ├── App.js             # Main route definitions and split points
+│   ├── store                  # Redux-specific pieces
+│   │   ├── createStore.js     # Create and instrument redux store
+│   │   ├── rootReducers.js    # Reducer registry and injection
+│   ├── utils                  # have utilities like your API wrapper, string utils etc
+│   │   ├── codeSplitting.js   # Split your code into small chunks which you can then load on demand
 ```
 
 ### Directory Structure (which contain redux and component)
 
 ```
-├── src                     
-│   ├── app                  
-│   │   ├──home                     
-│   │   │   ├──duck                 # Duck directory which houses all your Redux Code
-│   │   │   │   ├──action.js        # Contain all your action creators
-│   │   │   │   ├──operations.js    # Define any logic surrounding our actions and side effects (including Async logic)
-│   │   │   │   ├──reducers.js      # Deal with updating the state
-│   │   │   │   ├──types.js         # Contains string literals for your action types
-│   │   │   │   ├──index.js         # Re-export our operations, reducers and action types
-│   │   │   ├──Home.css             # Main route definitions and split points
-│   │   │   ├──HomeComponent.jsx    # Main route definitions and split points
-│   │   │   ├──HomeContainer.js     # Main route definitions and split points
-│   │   │   ├──index.js             # Re-export our directory
+├── src
+│   ├── app
+│   │   ├── home
+│   │   │   ├── duck                 # Duck directory which houses all your Redux Code
+│   │   │   │   ├── action.js        # Contain all your action creators
+│   │   │   │   ├── operations.js    # Define any logic surrounding our actions and side effects (including Async logic)
+│   │   │   │   ├── reducers.js      # Deal with updating the state
+│   │   │   │   ├── types.js         # Contains string literals for your action types
+│   │   │   │   ├── index.js         # Re-export our operations, reducers and action types
+│   │   │   ├── Home.css             # Contain css (it can also be a Scss/Sass file also)
+│   │   │   ├── HomeComponent.jsx    # Presentational components are suffixed with 'Component'
+│   │   │   ├── HomeContainer.js     # Containers are suffixed with 'Container'
+│   │   │   ├── index.js             # Re-export our directory
 ```
+
+###
 
 #### .envtemplate
 
@@ -66,3 +70,13 @@ example -
 - For creating .env variables -- `REACT_APP_(your-specified-name)`
 - For using -- `process.env.REACT_REACT_APP_(your-specified-name)`
 
+### Code splitting
+
+Use `createSplitPoint` from `utils/codeSplitting` which takes a required parameter `path` that describes the module path relative to directory name eg - `home/`
+Example use:
+
+```
+import createSplitPoint from '../../utils/codeSplitting';
+
+export default createSplitPoint('home/HomeContainer');
+```
