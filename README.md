@@ -58,7 +58,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 │   │   │   ├── index.js             # Re-export our directory
 ```
 
-###
+### Developer guidelines
 
 #### .envtemplate
 
@@ -70,7 +70,7 @@ example -
 - For creating .env variables -- `REACT_APP_(your-specified-name)`
 - For using -- `process.env.REACT_REACT_APP_(your-specified-name)`
 
-### Code splitting
+#### Code splitting
 
 Use `createSplitPoint` from `utils/codeSplitting` which takes a required parameter `path` that describes the module path relative to directory name eg - `home/`
 Example use:
