@@ -1,7 +1,18 @@
+// @flow
 import React from "react";
 import "./Home.css";
 
-function HomeComponent({ currentCount, onIncrementClick, onDecrementClick }) {
+type Props = {
+  currentCount: number,
+  onIncrementClick: () => {},
+  onDecrementClick: () => {}
+};
+
+function HomeComponent({
+  currentCount,
+  onIncrementClick,
+  onDecrementClick
+}: Props) {
   return (
     <div className="container">
       <div className="heading">

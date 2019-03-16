@@ -1,9 +1,16 @@
+// @flow
 import * as React from "react";
 import { connect } from "react-redux";
 import HomeComponent from "./HomeComponent";
 import { homeOperations } from "./duck";
 
-const HomeContainer = props => {
+type Props = {
+  currentCount: number,
+  onIncrementClick: () => {},
+  onDecrementClick: () => {}
+};
+
+const HomeContainer = (props: Props) => {
   return (
     <HomeComponent
       {...props}
