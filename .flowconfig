@@ -1,6 +1,6 @@
 [ignore]
-.*/node_modules/.*
-.*/build/.*
+<PROJECT_ROOT>/node_modules/.*
+<PROJECT_ROOT>/build/.*
 
 [include]
 
@@ -8,8 +8,11 @@
 
 [lints]
 
+
 [options]
 module.system.node.resolve_dirname=node_modules
+module.file_ext=.js
+module.file_ext=.jsx
 
 [strict]
 
