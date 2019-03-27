@@ -1,17 +1,17 @@
 // @flow
-import React from "react";
-import "./Home.css";
+import React from 'react';
+import './Home.css';
 
 type Props = {
   currentCount: number,
   onIncrementClick: () => {},
-  onDecrementClick: () => {}
+  onDecrementClick: () => {},
 };
 
 function HomeComponent({
   currentCount,
   onIncrementClick,
-  onDecrementClick
+  onDecrementClick,
 }: Props) {
   return (
     <div className="container">
@@ -21,8 +21,12 @@ function HomeComponent({
       </div>
       <div className="example">
         <p>current count: {currentCount}</p>
-        <button onClick={onIncrementClick}>Increment</button>
-        <button onClick={onDecrementClick}>Decrement</button>
+        <button type="button" onClick={onIncrementClick}>
+          Increment
+        </button>
+        <button type="button" onClick={onDecrementClick}>
+          Decrement
+        </button>
       </div>
     </div>
   );

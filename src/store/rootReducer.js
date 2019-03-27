@@ -1,8 +1,8 @@
-import { combineReducers } from "redux";
-import homeReducer from "../app/home/duck";
+import { combineReducers } from 'redux';
+import homeReducer from '../modules/home/duck';
 
 const rootReducer = combineReducers({
-  home: homeReducer
+  home: homeReducer,
 });
 
 export default rootReducer;

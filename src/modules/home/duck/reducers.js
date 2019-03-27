@@ -1,21 +1,21 @@
-import types from "./types";
+import types from './types';
 
 const INITIAL_STATE = {
-  count: 0
+  count: 0,
 };
 const homeReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case types.INCREMENT_COUNT: {
       return {
         ...state,
-        count: state.count + action.payload
+        count: state.count + action.payload,
       };
     }
 
     case types.DECREMENT_COUNT: {
       return {
         ...state,
-        count: state.count - action.payload
+        count: state.count - action.payload,
       };
     }
 
