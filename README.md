@@ -30,9 +30,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ├── src                        # Application source code
 │   ├── index.js               # Application bootstrap and rendering
 │   ├── index.css              # Basic css for the project
-│   ├── app
+│   ├── components             # Global Reusable Components
+│   ├── modules                # Components that dictate major functionalities
 │   │   ├── home               # Directories with the same names as the routes in App.js
-│   │   ├── App.js             # Main route definitions and split points
+│   │   ├── index.js           # Main route definitions and split points
 │   ├── store                  # Redux-specific pieces
 │   │   ├── createStore.js     # Create and instrument redux store
 │   │   ├── rootReducers.js    # Reducer registry and injection
@@ -44,7 +45,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ```
 ├── src
-│   ├── app
+│   ├── modules
 │   │   ├── home
 │   │   │   ├── duck                 # Duck directory which houses all your Redux Code
 │   │   │   │   ├── action.js        # Contain all your action creators
