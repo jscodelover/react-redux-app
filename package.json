@@ -20,7 +20,7 @@
     "eject": "react-scripts eject"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
+    "src/**/*.{js,jsx}": [
       "eslint --ext js --ext jsx src",
       "pretty-quick --staged",
       "git add"
@@ -41,6 +41,12 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
     "flow-bin": "^0.94.0",
     "flow-typed": "^2.5.1",
     "husky": "^1.3.1",
