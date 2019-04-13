@@ -3,6 +3,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import HomeComponent from './HomeComponent';
 import { homeOperations } from './duck';
+import { getCount } from './duck/selectors';
 
 type Props = {
   currentCount: number,
@@ -19,7 +20,7 @@ const HomeContainer = (props: Props) => (
 );
 
 const mapStateToProps = ({ home }) => ({
-  currentCount: home.count,
+  currentCount: getCount(home),
 });
 
 const mapDispatchToProps = (dispatch) => ({

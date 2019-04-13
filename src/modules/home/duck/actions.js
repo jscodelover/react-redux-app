@@ -1,4 +1,4 @@
-import types from './types';
+import types from './constants';
 
 const incrementCount = (payload) => ({
   type: types.INCREMENT_COUNT,

@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import store from './store/createStore';
 import './index.css';
-import App from './modules';
+import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const Root = (
